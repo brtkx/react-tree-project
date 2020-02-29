@@ -1,0 +1,114 @@
+@import "./colours.scss";
+@import "./mixins.scss";
+
+.button {
+  width: 220px;
+  height: 45px;
+  border-radius: 10px !important;
+  display: flex;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+
+  &.hidden {
+    cursor: default !important;
+    a {
+      cursor: default !important;
+    }
+  }
+
+  a {
+    color: $white !important;
+  }
+
+  &.round {
+    border-radius: 30px !important;
+  }
+
+  &.short {
+    height: 40px;
+    width: 140px;
+  }
+
+  &.pink {
+    background: linear-gradient(to right, $orange, $pink);
+    color: $white;
+    text-shadow: -1px -1px 0 $black-light, 1px -1px 0 $black-light,
+      -1px 1px 0 $black-light, 1px 1px 0 $black-light;
+    box-shadow: 0px 0px 8px 5px rgba(250, 131, 161, 0.15);
+    @include transition(box-shadow 0.5s ease);
+
+    &.short {
+      background: linear-gradient(to left, $orange, $pink);
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 8px 5px rgba(250, 131, 161, 0.5);
+    }
+  }
+
+  &.pink-light {
+    background-color: lighten($pink, 30%);
+    text-shadow: -1px -1px 0 $black-light, 1px -1px 0 $black-light,
+      -1px 1px 0 $black-light, 1px 1px 0 $black-light;
+    box-shadow: 0px 0px 8px 5px rgba(250, 131, 161, 0.15);
+    @include transition(box-shadow 0.5s ease);
+    @include transition(background-color 0.5s ease);
+
+    &:hover {
+      background-color: lighten($pink, 20%);
+      box-shadow: 0px 0px 8px 5px rgba(250, 131, 161, 0.5);
+    }
+  }
+
+  &.lime {
+    background: linear-gradient(to right, $lime, $yellow);
+    color: $white;
+    text-shadow: -1px -1px 0 $black-light, 1px -1px 0 $black-light,
+      -1px 1px 0 $black-light, 1px 1px 0 $black-light;
+    box-shadow: 0px 0px 8px 5px rgba(176, 218, 104, 0.15);
+    @include transition(box-shadow 0.5s ease);
+
+    &.short {
+      background: linear-gradient(to right, $lime, $yellow);
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 8px 5px rgba(176, 218, 104, 0.5);
+    }
+  }
+
+  &.has-arrow {
+    &:after {
+      content: "";
+      background: url("./../../images/arrow-right.png");
+      background-size: cover;
+      width: 17px;
+      height: 11px;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      &:after {
+        animation-duration: 0.85s;
+        animation-name: addMargin;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+      }
+    }
+  }
+}
+
+@keyframes addMargin {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(4px);
+  }
+}

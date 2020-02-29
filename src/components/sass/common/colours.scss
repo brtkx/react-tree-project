@@ -1,0 +1,20 @@
+$orange: #f9a574;
+$pink: #fa83a1;
+$white: #ffffff;
+$green: #00c976;
+$teal: #3eb58b;
+$blue: #007ade;
+$purple: #9000de;
+$lime: #b0da68;
+$yellow: #c0d544;
+$black: #333333;
+
+$black-light: rgba(0, 0, 0, 0.15);
+$orange-light: lighten($orange, 20%);
+$pink-light: lighten($pink, 20%);
+
+$teal-dark: darken($teal, 30%);
+
+.green {
+  color: lighten($green, 15%);
+}

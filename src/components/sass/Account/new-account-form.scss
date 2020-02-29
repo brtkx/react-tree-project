@@ -1,0 +1,45 @@
+.newacc {
+  &-form {
+    width: 70%;
+    &-wrap {
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-button {
+      margin: 30px auto 0 auto;
+    }
+
+    &.login {
+      &.hidden {
+        display: none;
+      }
+    }
+
+    &.signup {
+      &.hidden {
+        display: none;
+      }
+    }
+
+    legend {
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    p {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      border-radius: 12px;
+      border: 0;
+      height: 35px;
+      padding: 0 15px;
+    }
+  }
+}

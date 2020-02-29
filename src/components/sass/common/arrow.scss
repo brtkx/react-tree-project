@@ -1,0 +1,31 @@
+.arrow {
+  &-wrap {
+    position: absolute;
+    top: 560px;
+    cursor: pointer;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &-img {
+    height: 65px;
+    opacity: 0.65;
+    animation-duration: 1.5s;
+    animation-name: moveUpAndDown;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes moveUpAndDown {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateY(12px);
+  }
+}

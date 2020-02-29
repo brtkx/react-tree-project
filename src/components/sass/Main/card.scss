@@ -1,0 +1,73 @@
+@import "./../common/colours.scss";
+
+.card {
+  &-wrap {
+    width: 100%;
+    background-color: $white;
+    padding: 40px 10px;
+    border-top: 1px solid lighten($black-light, 75%);
+
+    &.reverse {
+      .card-content {
+        flex-direction: row-reverse;
+      }
+
+      .card-info-wrap {
+        padding-left: 0;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &.last {
+    padding-bottom: 0;
+  }
+
+  &.first {
+    border-top: 0;
+  }
+
+  &-title {
+    text-align: center;
+  }
+
+  &-image {
+    height: 350px;
+  }
+
+  &-circle {
+    &-green {
+      position: absolute;
+      right: -45px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  &-info {
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -80px;
+      padding-left: 50px;
+    }
+
+    &-title {
+      padding: 20px 0 15px;
+    }
+
+    &-text {
+      color: $black;
+      font-weight: normal !important;
+      margin: 20px 0;
+    }
+  }
+}

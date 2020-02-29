@@ -1,0 +1,20 @@
+@import "./../common/colours.scss";
+
+footer {
+  padding: 0 !important;
+}
+
+.footer {
+  height: 220px;
+  width: 100%;
+  background: url("./../../images/layout/footer.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: $white;
+
+  &-extra-links {
+    height: 60px;
+    width: 100%;
+    background-color: $white;
+  }
+}

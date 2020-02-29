@@ -1,0 +1,22 @@
+@import "./colours.scss";
+
+.divider {
+  height: 3px;
+  border-radius: 16px;
+
+  &.short {
+    width: 30px;
+  }
+
+  &.shorter {
+    width: 25px;
+  }
+
+  &.orange {
+    border: 1.5px solid $orange !important;
+  }
+
+  &.pink {
+    border: 1.5px solid $pink !important;
+  }
+}
