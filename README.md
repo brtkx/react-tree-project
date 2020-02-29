@@ -3,5 +3,5 @@ This React project allows people are the world to watch ads and donate funds rai
 Right now, only homepage has been done (almost fully complete) with some slight issues on mobile view.
 
 
-**Issues**
+**Issues:**\n
 Mobile view doesn't cover full screen width. This is being resolved now.
